@@ -106,12 +106,7 @@ const BasicTable = ({ id, staticQuestion, openModal }) => {
                   </td>
                   <td className="p-3 text-gray-200 w-14">
                     <div className="flex items-center justify-center ">
-                      <a
-                        href={link1}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className=""
-                      >
+                      <a href={link1} target="_blank" rel="noopener noreferrer">
                         <img
                           src={gettingLogo(link1)}
                           alt="gfg logo"
