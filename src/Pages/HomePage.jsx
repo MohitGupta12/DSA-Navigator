@@ -5,7 +5,7 @@ import QuestionGrid from "../components/QuestionGrid/QuestionGrid";
 import StaticData from "../data/data.json";
 import { useSharedDataContext } from "../Hooks/Context/useSharedData";
 
-const Home = () => {
+const HomePage = () => {
   let totalDoneQuestion = 0;
   const sharedContent = useSharedDataContext();
   const dynamicData = sharedContent.sharedData.data;
@@ -45,4 +45,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
