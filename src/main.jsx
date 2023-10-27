@@ -4,16 +4,20 @@ import Layout from "./components/Layout/Layout.jsx";
 import "./css/index.css";
 import "./css/font.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Home from "./Pages/Home.jsx";
+import HomePage from "./Pages/HomePage.jsx";
 import QuestionPage from "./Pages/QuestionPage.jsx";
+import GuidesPage from "./Pages/GuidesPage.jsx";
+import AboutPage from "./Pages/AboutPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
-      { path: "", element: <Home /> },
+      { path: "", element: <HomePage /> },
       { path: "questions/:id", element: <QuestionPage /> },
+      { path: "guides/", element: <GuidesPage /> },
+      { path: "about/", element: <AboutPage /> },
     ],
   },
 ]);
