@@ -3,7 +3,7 @@ import React from "react";
 const Button = ({ text, clickHandler }) => {
   return (
     <div
-      className="relative flex-shrink-0 inline-block text-base group"
+      className="relative flex-shrink-0 inline-block text-sm md:text-base group"
       // onClick={clickHandler}
     >
       <span className="relative z-10 block px-4 py-2 overflow-hidden font-medium leading-tight text-[#3a8e2d] transition-colors duration-300 ease-out border-2 border-[#3a8e2d] rounded-full group-hover:text-green-100">

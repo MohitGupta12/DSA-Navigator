@@ -13,7 +13,7 @@ const TopicCard = ({ staticData, dynamicData, index }) => {
     <div className="h-48 px-6 py-4 bg-blue-300 border-2 border-blue-400 rounded-2xl ">
       <div className="flex-col justify-evenly items-start text-[#232324] ">
         <title className="flex items-start justify-between my-2">
-          <div className="pr-5 text-3xl font-bold text-start ">
+          <div className="pr-5 text-2xl font-bold xl:text-3xl text-start ">
             {staticData.data[index].topicName}
           </div>
           <Link
@@ -31,24 +31,24 @@ const TopicCard = ({ staticData, dynamicData, index }) => {
             />
           </Link>
         </title>
-        <div className="pr-5 font-medium text-start">
+        <div className="pr-5 text-sm font-normal md:text-base text-start">
           Total Questions {dynamicData.data[index].questions.length}
         </div>
 
         {dynamicData.data[index].started ? (
           <div>
-            <div className="pr-5 italic font-medium text-start">
+            <div className="pr-5 text-sm italic font-normal md:text-base text-start">
               {dynamicData.data[index].questions.length -
                 dynamicData.data[index].doneQuestions}{" "}
               more to go
             </div>
-            <div className="pr-5 mt-3 italic font-medium text-start">
+            <div className="pr-5 mt-3 text-sm italic font-normal md:text-base text-start">
               {percentage}% done
             </div>
             <ProgressBar value={percentage} height={15} width={100} />
           </div>
         ) : (
-          <div className="pr-5 mt-6 text-lg italic font-medium text-start">
+          <div className="pr-5 mt-6 text-base italic font-normal md:text-lg text-start">
             not started
           </div>
         )}

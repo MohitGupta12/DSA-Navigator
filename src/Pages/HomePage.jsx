@@ -23,11 +23,11 @@ const HomePage = () => {
   const totalPercentage = ((totalDoneQuestion / 450) * 100).toFixed(2);
   return (
     <>
-      <h2 className="mx-1 text-3xl font-semibold text-center ">
+      <h2 className="mx-1 text-xl font-semibold text-center md:text-2xl xl:text-3xl ">
         Your DSA Cracking Portal
       </h2>
       {!isStart ? (
-        <h2 className="mt-2 text-2xl font-semibold text-center ">
+        <h2 className="mt-2 text-lg font-semibold text-center md:text-xl xl:text-2xl ">
           {" "}
           Start Solving{" "}
         </h2>
@@ -38,7 +38,7 @@ const HomePage = () => {
         />
       )}
       <ScrollAnimation />
-      <div className="flex justify-center items-start w-screen h-[76vh] ">
+      <div className="flex items-start justify-center w-screen ">
         <QuestionGrid staticData={staticData} isStart={isStart} />
       </div>
     </>

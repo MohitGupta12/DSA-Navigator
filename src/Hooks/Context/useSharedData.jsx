@@ -12,6 +12,9 @@ export const SharedDataProvider = ({ children }) => {
 
   // console.log(sharedData.data);
 
+  const resetData = () => {
+    setSharedData(DynamicData);
+  };
   const bookmarkHandler = (id, index) => {
     const updatedData = { ...sharedData };
     const question = updatedData.data[id].questions[index];
@@ -82,6 +85,7 @@ export const SharedDataProvider = ({ children }) => {
         notesHandler,
         notesDataHandler,
         statusSorter,
+        resetData,
       }}
     >
       {children}
