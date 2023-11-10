@@ -10,8 +10,10 @@ export default {
         sans: ['Ubuntu Mono', 'monospace'],
       },
       boxShadow: {
-        'md-green': '0 3px 3px -5px #378B29, 0 2px 5px #74D680',
-        'bar-shadow': 'inset 0 1px 2px rgba(0,0,0,0.2), 0 1px rgba(255,255,255,.4)'
+        'bar-shadow': ' 0px 0px 32px 4px rgba(150,210,250,0.25)',
+      },
+      textShadow:{
+        'md-white':'0px 0px 8px rgba(255,255,255,0.65)'
       },
       keyframes: {
         animatedgradient: {

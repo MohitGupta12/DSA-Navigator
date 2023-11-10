@@ -1,9 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const BottomNavBar = () => {
   return (
-    <div className="h-12 z-[100] bg-[#393e46] flex justify-between items-center absolute bottom-0  w-full">
+    <div className="h-12 z-[100] bg-[#393e46] shadow-bar-shadow  flex justify-between items-center absolute bottom-0  w-full">
       <div className="px-4">
         <a
           href="https://github.com/MohitGupta12/Dsa_Tracker"
@@ -32,8 +31,10 @@ const BottomNavBar = () => {
         </a>
         <Link className="flex items-center justify-center " to={"about"}>
           <button className=" px-3 py-1 mx-2 font-bold  text-xs md:text-sm xl:text-base hover:scale-105  transition ease-linear delay-75 text-[#242424] bg-[#F0FFFF] rounded-full ">
-            <span className="hidden md:inline">About</span>
+            <span className="inline md:hidden">
             🤔
+            </span>
+            <span className="hidden md:inline" >About</span>
           </button>
         </Link>
       </div>

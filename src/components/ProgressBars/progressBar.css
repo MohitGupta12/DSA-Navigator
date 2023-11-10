@@ -28,7 +28,7 @@
 
 
 .a {
-    background-color: #069E2D;
+    background-color: hsl(123, 70%, 50%);
     height: 20px;
 
     /* animation: progress-bar 4s ease-in; */

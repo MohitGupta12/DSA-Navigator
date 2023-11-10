@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
 import Button from "../Buttons/Button";
 import ProgressBar from "../ProgressBars/ProgressBar";
 import { Link } from "react-router-dom";
@@ -9,8 +9,11 @@ const TopicCard = ({ staticData, dynamicData, index }) => {
       dynamicData.data[index].questions.length) *
     100
   ).toFixed(0);
+  const lap1 =  !dynamicData.data[index].started?"h-48 px-6 py-4 bg-[#9CEAEE] border-2 border-[#3bc0c7] rounded-2xl shadow-md shadow-[#a8edf066]":"h-48 px-6 py-4 bg-[#96E8C3] border-2 border-[#3dc588] rounded-2xl shadow-md shadow-[#a8f0d066]";
+  // console.log(bgColor);
   return (
-    <div className="h-48 px-6 py-4 bg-blue-200 border-2 border-blue-200 rounded-2xl ">
+    <div className={lap1}>
+    {/* <div className={`h-48 px-6 py-4 bg-[#a8f0d0] border-2 border-[#3dc588] rounded-2xl shadow-md shadow-[#a8f0d066]`}>  */}
       <div className="flex-col justify-evenly items-start text-[#232324] ">
         <title className="flex items-start justify-between my-2">
           <div className="pr-5 text-2xl font-bold xl:text-3xl text-start ">
@@ -21,10 +24,11 @@ const TopicCard = ({ staticData, dynamicData, index }) => {
             key={index}
             to={`/questions/${index}`}
           >
-            <Button
+            <Button 
               text={
                 dynamicData.data[index].started ? "Solve Now" : "Start  Now"
               }
+              isStarted={dynamicData.data[index].started }
               clickHandler={() => {
                 console.log("button clicked");
               }}
