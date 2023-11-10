@@ -1,10 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { React, useEffect, useRef, useState } from "react";
 import SolvedQuesBar from "../components/ProgressBars/SolvedQuesBar";
 import ScrollAnimation from "../Animations/ScrollAnimation";
 import QuestionGrid from "../components/QuestionGrid/QuestionGrid";
 import StaticData from "../data/data.json";
 import { useSharedDataContext } from "../Hooks/Context/useSharedData";
-import ProgressBar2 from "../components/ProgressBars/ProgressBar2";
 
 const HomePage = () => {
   let totalDoneQuestion = 0;
@@ -24,23 +24,20 @@ const HomePage = () => {
   const totalPercentage = ((totalDoneQuestion / 450) * 100).toFixed(2);
   return (
     <>
-      <h2 className="mx-1 text-xl font-semibold text-center md:text-2xl xl:text-3xl ">
+      <h2 className="mx-1 text-xl font-semibold text-center md:text-2xl xl:text-3xl  " style={{"textShadow": "0px 0px 8px rgba(255,255,255,0.65)"}}>
         Your DSA Cracking Portal
       </h2>
       {!isStart ? (
-        <h2 className="mt-2 text-lg font-semibold text-center md:text-xl xl:text-2xl ">
+        <h2 className="mt-2 text-lg font-semibold text-center md:text-xl xl:text-2xl " style={{"textShadow": "0px 0px 8px rgba(255,255,255,0.65)"}}>
           {" "}
           Start Solving{" "}
         </h2>
       ) : (
-        // <SolvedQuesBar
-        //   value={totalPercentage}
-        //   questionSolved={totalDoneQuestion}
-        // />
-        <ProgressBar2
+        <SolvedQuesBar
           value={totalPercentage}
           questionSolved={totalDoneQuestion}
         />
+        
       )}
       <ScrollAnimation />
       <div className="flex items-start justify-center w-screen ">

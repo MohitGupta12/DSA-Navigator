@@ -9,6 +9,8 @@ import {
 } from "@heroicons/react/24/outline";
 import { useSharedDataContext } from "../../Hooks/Context/useSharedData";
 
+
+
 function gettingLogo(url) {
   let src;
   if (url.includes("geeksforgeeks")) {
@@ -36,8 +38,6 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
   };
   const handleStatusChange = (id, index) => {
     sharedContent.statusHandler(id, index);
-    console.log("In status handler");
-    // console.log(staticQuestion);
     sortingFunction();
   };
 

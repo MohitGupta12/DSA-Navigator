@@ -1,6 +1,9 @@
-import { createContext, useContext, useState } from "react";
+/* eslint-disable react/prop-types */
+import { createContext, useContext } from "react";
 import DynamicData from "../../data/db_data.json";
 import useLocalStorage from "../LocalStorage/useLocalStorage";
+import { toast } from 'sonner'
+
 
 const SharedDataContext = createContext();
 
@@ -49,6 +52,13 @@ export const SharedDataProvider = ({ children }) => {
     const updatedData = { ...sharedData };
     const topic = updatedData.data[id];
     const question = topic.questions[index];
+
+    if(!question.Done){
+      toast.success('Question is pushed down in table')
+    }else{
+      toast.error('Question is pushed up in table')
+    }
+
     question.Done = !question.Done;
 
     topic.doneQuestions = questionCounter(topic.questions);
