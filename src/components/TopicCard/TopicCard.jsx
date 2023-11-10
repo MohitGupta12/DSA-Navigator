@@ -10,7 +10,7 @@ const TopicCard = ({ staticData, dynamicData, index }) => {
     100
   ).toFixed(0);
   return (
-    <div className="h-48 px-6 py-4 bg-blue-300 border-2 border-blue-400 rounded-2xl ">
+    <div className="h-48 px-6 py-4 bg-blue-200 border-2 border-blue-200 rounded-2xl ">
       <div className="flex-col justify-evenly items-start text-[#232324] ">
         <title className="flex items-start justify-between my-2">
           <div className="pr-5 text-2xl font-bold xl:text-3xl text-start ">

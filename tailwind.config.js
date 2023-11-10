@@ -4,12 +4,14 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ], theme: {
+
     extend: {
       fontFamily: {
         sans: ['Ubuntu Mono', 'monospace'],
       },
       boxShadow: {
         'md-green': '0 3px 3px -5px #378B29, 0 2px 5px #74D680',
+        'bar-shadow': 'inset 0 1px 2px rgba(0,0,0,0.2), 0 1px rgba(255,255,255,.4)'
       },
       keyframes: {
         animatedgradient: {

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 import {
   BookmarkIcon as SolidBookmarkIcon,
   PencilSquareIcon as SolidPencilSquareIcon,
@@ -27,25 +27,24 @@ function gettingLogo(url) {
   return src;
 }
 
-const BasicTable = ({ id, staticQuestion, openModal }) => {
+const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
   const sharedContent = useSharedDataContext();
   const dynamicData = sharedContent.sharedData.data[id].questions;
-  const data = sharedContent.sharedData.data[id].questions;
 
   const handleBookmarkChange = (id, index) => {
     sharedContent.bookmarkHandler(id, index);
   };
   const handleStatusChange = (id, index) => {
     sharedContent.statusHandler(id, index);
+    console.log("In status handler");
+    // console.log(staticQuestion);
+    sortingFunction();
   };
-
-  //TODO : make a function in sharedContent that will take staticQuestion and do sorting on it and rerun my functions whenever done is being change
-  //sortedStaticQuestion = function(staticQuestion);
 
   return (
     <>
-      <div className="w-3/4 h-[72vh] overflow-auto">
-        <table className="min-w-full ">
+      <div className="w-4/5 h-[72vh] overflow-auto">
+        <table className="w-full ">
           <thead className="sticky top-0 bg-gray-700 border-b-2 border-gray-400 rounded-t-lg ">
             <tr>
               <th className="  sticky top-0 p-3 text-[20px] font-bold tracking-wide ">
@@ -69,9 +68,10 @@ const BasicTable = ({ id, staticQuestion, openModal }) => {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-300">
-            {staticQuestion.map((row, index) => {
+            {staticQuestion.map((row) => {
               const link1 = row.URL;
               const link2 = row.URL2;
+              const index = row.id - 1;
               const problem = row.Problem;
               return (
                 <tr
@@ -84,14 +84,18 @@ const BasicTable = ({ id, staticQuestion, openModal }) => {
                         type="checkbox"
                         checked={dynamicData[index].Done}
                         onChange={() => handleStatusChange(id, index)}
+                        className="cursor-pointer"
                       />
-                      <div className="flex justify-center w-full px-3 py-2">
+                      <div
+                        className="flex justify-center w-full px-3 py-2"
+                        onClick={() => handleStatusChange(id, index)}
+                      >
                         {dynamicData[index].Done ? (
-                          <span className="flex-1 p-1.5 text-sm font-medium uppercase tracking-wider text-green-200 bg-green-800 rounded-xl bg-opacity-50 border-2 border-green-800 text-center">
+                          <span className="cursor-pointer flex-1 p-1.5 text-sm font-medium uppercase tracking-wider text-green-200 bg-green-800 rounded-xl bg-opacity-50 border-2 border-green-800 text-center">
                             Done
                           </span>
                         ) : (
-                          <span className="flex-1 text-center p-1.5 text-sm font-medium uppercase tracking-wider text-yellow-200 bg-yellow-800 rounded-xl bg-opacity-50 border-2 border-yellow-800">
+                          <span className="flex-1 text-center cursor-pointer p-1.5 text-sm font-medium uppercase tracking-wider text-yellow-200 bg-yellow-800 rounded-xl bg-opacity-50 border-2 border-yellow-800">
                             Pending
                           </span>
                         )}
@@ -99,7 +103,7 @@ const BasicTable = ({ id, staticQuestion, openModal }) => {
                     </div>
                   </td>
                   <td className="p-3 text-center text-gray-200 w-11">
-                    {index + 1}
+                    {row.id}
                   </td>
                   <td className="flex-1 p-3 text-lg text-gray-200">
                     {row.Problem}

@@ -7,7 +7,7 @@ const SolvedQuesBar = ({ value, questionSolved }) => {
       <h2 className="my-3 text-lg">
         Total Question Solved : {questionSolved} ({value}%)
       </h2>
-      <ProgressBar value={value} />
+      <ProgressBar value={value} questionSolved={questionSolved} />
     </div>
   );
 };

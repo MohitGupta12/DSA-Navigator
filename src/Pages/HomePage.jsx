@@ -4,6 +4,7 @@ import ScrollAnimation from "../Animations/ScrollAnimation";
 import QuestionGrid from "../components/QuestionGrid/QuestionGrid";
 import StaticData from "../data/data.json";
 import { useSharedDataContext } from "../Hooks/Context/useSharedData";
+import ProgressBar2 from "../components/ProgressBars/ProgressBar2";
 
 const HomePage = () => {
   let totalDoneQuestion = 0;
@@ -32,7 +33,11 @@ const HomePage = () => {
           Start Solving{" "}
         </h2>
       ) : (
-        <SolvedQuesBar
+        // <SolvedQuesBar
+        //   value={totalPercentage}
+        //   questionSolved={totalDoneQuestion}
+        // />
+        <ProgressBar2
           value={totalPercentage}
           questionSolved={totalDoneQuestion}
         />

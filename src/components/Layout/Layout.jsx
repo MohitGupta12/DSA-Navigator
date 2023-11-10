@@ -7,11 +7,9 @@ function Layout() {
   return (
     <>
       <SharedDataProvider>
-        <Link to={"/"}>
-          <h1 className="mt-6 mb-2 text-4xl font-bold text-center md:text-5xl ">
-            DSA Tracker
-          </h1>
-        </Link>
+        <h1 className="mt-6 mb-2 text-4xl font-bold text-center md:text-5xl ">
+          <Link to={"/"}>DSA Tracker</Link>
+        </h1>
         <Outlet />
         <BottomNavBar />
       </SharedDataProvider>
