@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import {
   BookmarkIcon as SolidBookmarkIcon,
   PencilSquareIcon as SolidPencilSquareIcon,
@@ -16,9 +16,9 @@ function gettingLogo(url) {
   if (url.includes("geeksforgeeks")) {
     src = "../src/assets/gfg.png";
   } else if (url.includes("codingninjas")) {
-    src = "../src/assets/coding ninjas.jpg";
+    src = "../src/assets/coding ninjas.png";
   } else if (url.includes("leetcode")) {
-    src = "../src/assets/leetcode.webp";
+    src = "../src/assets/leetcode.png";
   } else {
     if (!url) {
       src = "../src/assets/empty.png";
@@ -43,9 +43,9 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
 
   return (
     <>
-      <div className="w-4/5 h-[72vh] overflow-auto">
+      <div className="w-4/5 h-[72vh] overflow-auto " style ={{'boxShadow': '0px 8px 20px 6px rgba(0,0,0,0.3)'}}>
         <table className="w-full ">
-          <thead className="sticky top-0 bg-gray-700 border-b-2 border-gray-400 rounded-t-lg ">
+          <thead className="sticky top-0 bg-gray-700 border-b-2 z-10 border-gray-400 rounded-t-lg " >
             <tr>
               <th className="  sticky top-0 p-3 text-[20px] font-bold tracking-wide ">
                 Status
@@ -73,10 +73,12 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
               const link2 = row.URL2;
               const index = row.id - 1;
               const problem = row.Problem;
+              const shadowC =dynamicData[index].Done ? '0px 0px 12px 04px rgba(57,255,20,.25)': '0px 0px 12px 04px rgba(150,210,250,0.2)'
               return (
                 <tr
                   key={index}
-                  className={dynamicData[index].Done ? "bg-green-900" : ""}
+                  className={dynamicData[index].Done ? "bg-[#00ff003f]" : ""}
+                  style={{'boxShadow': `${shadowC}`}}
                 >
                   <td className="w-32 p-3 text-gray-200">
                     <div className="flex justify-start ">
@@ -105,7 +107,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                   <td className="p-3 text-center text-gray-200 w-11">
                     {row.id}
                   </td>
-                  <td className="flex-1 p-3 text-lg text-gray-200">
+                  <td className="flex-1 p-3 text-lg text-gray-200 whitespace-nowrap">
                     {row.Problem}
                   </td>
                   <td className="p-3 text-gray-200 w-14">
@@ -114,7 +116,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                         <img
                           src={gettingLogo(link1)}
                           alt="gfg logo"
-                          className="w-8 h-6 "
+                          className="w-8 h-8 "
                         />
                       </a>
                     </div>
@@ -125,7 +127,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                         <img
                           src={gettingLogo(link2)}
                           alt="gfg logo"
-                          className="w-6 h-6 "
+                          className="w-8 h-8 "
                         />
                       </a>
                     </div>
@@ -134,29 +136,34 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                     <div className="flex justify-evenly">
                       {dynamicData[index].Bookmark ? (
                         <SolidBookmarkIcon
-                          className="w-6 h-6 text-green-500 "
+                          className="w-6 h-6  text-green-500 "
+                          style={{ filter: 'drop-shadow(0px 0px 8px rgba(16, 185, 129, 0.65))' }}
                           onClick={() => {
                             handleBookmarkChange(id, index);
                           }}
                         />
                       ) : (
                         <OutlineBookmarkIcon
-                          className="w-6 h-6 text-green-500 "
+                          className="w-6 h-6 text-white "
+                          style={{ filter: 'drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.65))' }}
                           onClick={() => {
                             handleBookmarkChange(id, index);
                           }}
+
                         />
                       )}
                       {dynamicData[index].Notes ? (
                         <SolidPencilSquareIcon
                           className="w-6 h-6 text-green-500"
+                          style={{ filter: 'drop-shadow(0px 0px 8px rgba(16, 185, 129, 0.65))' }}
                           onClick={() => {
                             openModal(problem, id, index);
                           }}
                         />
                       ) : (
                         <OutlinePencilSquareIcon
-                          className="w-6 h-6 text-green-500"
+                          className="w-6 h-6 text-white"
+                          style={{ filter: 'drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.65))' }}
                           onClick={() => openModal(problem, id, index)}
                         />
                       )}

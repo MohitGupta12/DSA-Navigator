@@ -3,6 +3,30 @@
 @tailwind utilities;
 
 /* @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); */
+:root {
+  /* Home Page  */
+  --bgColor: #222831;
+  --textColor: #ffffff;
+  --scrollAnimation: #ffffff;
+  --navBar: #393e46;
+  --topicCard: #9CEAEE;
+  --topicBorder: #3bc0c7;
+  --btnColor: #2d3a8e;
+  --topicCardStarted: #96E8C3;
+  --topicBorderStarted: #3dc588;
+  --btnColorStarted: #3a8e2d;
+  --progressbar: #26d92f;
+  /* Question Page  */
+  --SearchBarColor: #ffffff;
+  --DoneColor: #c8e6c9;
+  --RandomBtnColor: #2563eb;
+  --BookmarkBtnColor: #00D26A;
+  --headerColor: #374151;
+  --noteAndBookmarkBtnColor: #10b981;
+  --DoneRowColor: #00ff003f;
+}
+
+
 
 :root {
   /* font-family: 'Rubik', 'Montserrat', Inter, Avenir, Helvetica, Arial, sans-serif; */
@@ -20,6 +44,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+svg path {
+  stroke-width: 2;
 }
 
 /* 

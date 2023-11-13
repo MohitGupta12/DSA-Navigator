@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Button2 from "../components/Buttons/Button2";
 import StaticData from "../data/data.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -36,6 +36,20 @@ const QuestionPage = () => {
       }
     });
   };
+
+   const pickRandom = (staticData, dynamicData) => {
+    const randomIndex = Math.floor(Math.random() * staticData.length);
+    let randomURL = staticData[randomIndex].URL;
+    if (randomURL === "") {
+      randomURL = staticData[randomIndex].URL2;
+    }
+
+    if (dynamicData[randomIndex].Done) {
+      pickRandom(staticData, dynamicData);
+    } else {
+      window.open(randomURL, "_blank");
+    }
+   };
 
   const [sortedStaticQuestion, setSortedStaticQuestion] = useState(() => {
     return sortStaticQuestions(StaticData.data[id].questions);
@@ -118,8 +132,8 @@ const QuestionPage = () => {
         onClose={() => setIsNotesOpen(false)}
         updateHandler={notesHandler}
       />
-      <h2 className="mx-1 text-xl font-semibold text-center md:text-2xl xl:text-3xl ">
-        <Link to={"/"} className="text-blue-400 hover:underline">
+      <h2 className="mx-1 text-xl font-semibold text-center md:text-2xl xl:text-3xl " style={{"textShadow": "0px 0px 8px rgba(255,255,255,0.65)"}}>
+        <Link to={"/"} className="text-blue-400 hover:underline" style={{"textShadow": "0px 0px 8px rgba(96,165,250,0.65)"}}>
           Topics
         </Link>
         /{dynamicData.topicName}
@@ -128,7 +142,6 @@ const QuestionPage = () => {
         <div className="flex w-3/4 focus:ring-2 focus:ring-primary">
           <Button2
             text={"Pick Random"}
-            color="#007bff"
             onClickHandler={() =>
               pickRandom(StaticData.data[id].questions, dynamicData.questions)
             }
@@ -140,15 +153,17 @@ const QuestionPage = () => {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search Question.. 🔍"
           />
-          <div className="bg-[#c8e6c9] rounded-r-[4px] text-sm md:text-base  xl:text-lg px-[12px] py-[6px] text-[#242424] items-center flex w-fit ">
-            <span className="font-semibold">
+          <div className="bg-[#c8e6c9] rounded-r-[4px] text-sm md:text-base  xl:text-lg px-[12px] py-[6px] text-[#242424] items-center flex w-fit "  
+          style={{"textShadow": "0px 0px 10px rgba(0,210,106,0.65)"}}
+          >
+            <span className="font-semibold text-green-900">
               {dynamicData.doneQuestions}/{dynamicData.questions.length}{" "}
               <span className="hidden md:inline">&#160;Done</span>
             </span>
             <span className="p-2">
               <FontAwesomeIcon
                 icon={faSquareCheck}
-                style={{ color: "#00d26a" }}
+                style={{ color: "#00D26A" }}
               />
             </span>
           </div>
@@ -157,7 +172,7 @@ const QuestionPage = () => {
           🏷️
         </button>
       </div>
-      <div className="flex items-center justify-center w-full">
+      <div className="flex items-center justify-center w-full ">
         <BasicTable
           id={id}
           staticQuestion={

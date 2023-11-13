@@ -28,8 +28,6 @@ export const SharedDataProvider = ({ children }) => {
     const updatedData = { ...sharedData };
     const question = updatedData.data[id].questions[index];
     question.Notes = !(question.NotesData === "");
-    console.log(question.NotesData);
-    console.log(question.NotesData === "");
     setSharedData(updatedData);
   };
   const notesDataHandler = (id, index, notesData) => {
@@ -51,12 +49,19 @@ export const SharedDataProvider = ({ children }) => {
   const statusHandler = (id, index) => {
     const updatedData = { ...sharedData };
     const topic = updatedData.data[id];
+    
     const question = topic.questions[index];
 
     if(!question.Done){
-      toast.success('Question is pushed down in table')
+      toast.success(<div>
+        <div className=" text-lg font-bold text-green-800">Done {topic.doneQuestions+1}/{topic.questions.length}</div> 
+        <div className="font-semibold">Question no.{index+1} is pushed down in table</div>
+        </div>)
     }else{
-      toast.error('Question is pushed up in table')
+      toast.error(<div>
+        <div className=" text-lg font-bold text-red-800">Done {topic.doneQuestions-1}/{topic.questions.length}</div> 
+        <div className="font-semibold">Question no.{index+1} is pushed up in table</div>
+        </div>)
     }
 
     question.Done = !question.Done;

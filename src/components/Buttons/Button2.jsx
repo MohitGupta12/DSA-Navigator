@@ -1,21 +1,12 @@
-import React from "react";
-
+/* eslint-disable react/prop-types */
 const Button2 = ({ text, onClickHandler }) => {
   return (
     <>
-      <a
-        onClick={onClickHandler}
-        className="relative px-5 py-2 overflow-hidden font-medium text-blue-400 bg-[#242424] border-2 border-blue-400 shadow-inner group"
-      >
-        <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-blue-800 group-hover:w-full ease"></span>
-        <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-blue-800 group-hover:w-full ease"></span>
-        <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-blue-border-blue-800 group-hover:h-full ease"></span>
-        <span className="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-blue-border-blue-800 group-hover:h-full ease"></span>
-        <span className="absolute inset-0 w-full h-full duration-300 delay-300 bg-blue-900 opacity-0 group-hover:opacity-100"></span>
-        <span className="relative text-sm transition-colors duration-300 delay-200 md:text-base group-hover:text-white ease">
-          {text}
-        </span>
-      </a>
+     <a  className="px-5 py-2.5 relative rounded-l-md cursor-pointer group overflow-hidden font-medium bg-blue-50 text-blue-600 inline-block"
+     onClick={onClickHandler}>
+<span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-blue-600 group-hover:h-full opacity-90"></span>
+<span className="relative top-[-10%] group-hover:text-white">{text}</span>
+</a>
     </>
   );
 };
