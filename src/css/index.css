@@ -3,66 +3,69 @@
 @tailwind utilities;
 
 /* @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); */
-:root {
-  /* Home Page  */
-  --bgColor: #222831;
-  --textColor: #ffffff;
-  --scrollAnimation: #ffffff;
-  --navBar: #393e46;
-  --topicCard: #9CEAEE;
-  --topicBorder: #3bc0c7;
-  --btnColor: #2d3a8e;
-  --topicCardStarted: #96E8C3;
-  --topicBorderStarted: #3dc588;
-  --btnColorStarted: #3a8e2d;
-  --progressbar: #26d92f;
-  /* Question Page  */
-  --SearchBarColor: #ffffff;
-  --DoneColor: #c8e6c9;
-  --RandomBtnColor: #2563eb;
-  --BookmarkBtnColor: #00D26A;
-  --headerColor: #374151;
-  --noteAndBookmarkBtnColor: #10b981;
-  --DoneRowColor: #00ff003f;
+@layer base {
+	:root {
+		/* Home Page  */
+		--bkg: hsl(216, 18%, 16%);
+		--text-color: hsl(0, 0%, 100%);
+		--nav-bar: 217deg, 10%, 25%;
+		--topic-card: 183deg, 71%, 77%;
+		--topic-border: 183deg, 56%, 51%;
+		--topic-btn-color: 232deg, 52%, 37%;
+		--topic-text-color: 240deg, 1%, 14%;
+		--topic-shadow-color: 183deg, 71%, 80%, 0.4;
+		--topic-shadow-started-color: 153deg, 71%, 80%, 0.4;
+		--topic-card-started: 153deg, 64%, 75%;
+		--topic-border-started: 153deg, 54%, 51%;
+		--topic-btn-color-started: 112deg, 52%, 37%;
+		--progress-bar: 123deg, 70%, 50%;
+		/* Question Page  */
+		--done-color: 122deg, 38%, 84%;
+		--bookmark-btn-active-color: 150deg, 100%, 41%;
+		--bookmark-btn-color: 160deg, 84%, 39%;
+		--table-header-color: 217deg, 19%, 27%;
+		--bookmark-icon-color: 142deg, 71%, 45%;
+		--notes-icon-color: 45deg, 93%, 47%;
+		--done-row-color: 120deg, 100%, 50%, 0.247;
+	}
+
 }
 
 
-
 :root {
-  /* font-family: 'Rubik', 'Montserrat', Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: 'Ubuntu Mono', ;
-  line-height: 1.5;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #222831;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+	/* font-family: 'Rubik', 'Montserrat', Inter, Avenir, Helvetica, Arial, sans-serif; */
+	font-family: 'Ubuntu Mono', ;
+	line-height: 1.5;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	color-scheme: light dark;
+	color: var(--text-color);
+	background-color: var(--bkg);
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 }
 
 svg path {
-  stroke-width: 2;
+	stroke-width: 2;
 }
 
 /* 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
 } */
 
 ::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 .custom-placeholder::placeholder {
-  text-align: center;
+	text-align: center;
 }

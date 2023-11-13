@@ -45,7 +45,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
     <>
       <div className="w-4/5 h-[72vh] overflow-auto " style ={{'boxShadow': '0px 8px 20px 6px rgba(0,0,0,0.3)'}}>
         <table className="w-full ">
-          <thead className="sticky top-0 bg-gray-700 border-b-2 z-10 border-gray-400 rounded-t-lg " >
+          <thead className="sticky top-0 bg-tableHeaderColor border-b-2 z-10 border-gray-400 rounded-t-lg " >
             <tr>
               <th className="  sticky top-0 p-3 text-[20px] font-bold tracking-wide ">
                 Status
@@ -77,7 +77,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
               return (
                 <tr
                   key={index}
-                  className={dynamicData[index].Done ? "bg-[#00ff003f]" : ""}
+                  className={dynamicData[index].Done ? "bg-doneRowColor" : ""}
                   style={{'boxShadow': `${shadowC}`}}
                 >
                   <td className="w-32 p-3 text-gray-200">
@@ -115,7 +115,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                       <a href={link1} target="_blank" rel="noopener noreferrer">
                         <img
                           src={gettingLogo(link1)}
-                          alt="gfg logo"
+                          alt="Problem 1 website logo"
                           className="w-8 h-8 "
                         />
                       </a>
@@ -126,7 +126,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                       <a href={link2} target="_blank" rel="noopener noreferrer">
                         <img
                           src={gettingLogo(link2)}
-                          alt="gfg logo"
+                          alt="Problem 2 website logo"
                           className="w-8 h-8 "
                         />
                       </a>
@@ -136,7 +136,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                     <div className="flex justify-evenly">
                       {dynamicData[index].Bookmark ? (
                         <SolidBookmarkIcon
-                          className="w-6 h-6  text-green-500 "
+                          className="w-6 h-6  text-bookmarkIconColor "
                           style={{ filter: 'drop-shadow(0px 0px 8px rgba(16, 185, 129, 0.65))' }}
                           onClick={() => {
                             handleBookmarkChange(id, index);
@@ -154,8 +154,8 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                       )}
                       {dynamicData[index].Notes ? (
                         <SolidPencilSquareIcon
-                          className="w-6 h-6 text-green-500"
-                          style={{ filter: 'drop-shadow(0px 0px 8px rgba(16, 185, 129, 0.65))' }}
+                          className="w-6 h-6 text-notesIconColor drop-shadow-notes"
+                          style={{ filter: 'drop-shadow(0px 0px 8px rgba(245, 158, 11, 0.65))' }}
                           onClick={() => {
                             openModal(problem, id, index);
                           }}

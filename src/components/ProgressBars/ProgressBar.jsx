@@ -12,7 +12,7 @@ const ProgressBar = ({ questionSolved, value, height, width }) => {
   return (
     <div className="progress" style={barStyle}>
       <div
-        className="fill a"
+        className="fill a bg-progressBar"
         style={{ width: `${value}%`, "--progress-width": `${value}%` }}
       ></div>
     </div>

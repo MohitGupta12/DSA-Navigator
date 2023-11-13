@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const BottomNavBar = () => {
   return (
-    <div className="h-12 z-[100] bg-[#393e46] shadow-bar-shadow  flex justify-between items-center absolute bottom-0  w-full">
+    <div className="h-12 z-[100] bg-navBar shadow-navbar-shadow  flex justify-between items-center absolute bottom-0  w-full">
       <div className="px-4">
         <a
           href="https://github.com/MohitGupta12/Dsa_Tracker"

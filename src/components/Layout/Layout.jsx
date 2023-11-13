@@ -9,7 +9,7 @@ function Layout() {
     <>      
     <Toaster richColors  position="top-right" />
 
-      <SharedDataProvider>
+      <SharedDataProvider >
         <h1 className="mt-6 mb-2 text-4xl font-bold text-center md:text-5xl  " style ={{"textShadow": "0px 0px 16px rgba(255,255,255,0.71) "}}>
           <Link to={"/"}>DSA Tracker</Link>
         </h1>

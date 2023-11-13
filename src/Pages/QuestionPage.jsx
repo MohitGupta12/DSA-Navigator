@@ -121,8 +121,8 @@ const QuestionPage = () => {
   };
 
   const bookmarkBtnStyle = isBookmarkActive
-    ? "inline-flex items-center justify-center w-fit py-3 xl:py-5 px-2 xl:px-3 ml-6 text-sm xl:text-lg text-white bg-green-600 rounded-[4px] scale-110  transition-all duration-200 ease-in-out"
-    : "inline-flex items-center justify-center w-fit py-3 xl:py-5 px-2 xl:px-3 ml-6 text-sm xl:text-lg text-white bg-green-500 rounded-[4px] scale-100 transition-all duration-200 ease-in-out";
+    ? "inline-flex items-center justify-center w-fit py-3 xl:py-5 px-2 xl:px-3 ml-6 text-sm xl:text-lg text-white bg-bookmarkBtnColorActive shadow-md shadow-green-400 rounded-[4px] scale-110  transition-all duration-200 ease-in-out"
+    : "inline-flex items-center justify-center w-fit py-3 xl:py-5 px-2 xl:px-3 ml-6 text-sm xl:text-lg text-white bg-bookmarkBtnColor shadow-sm shadow-green-500  rounded-[4px] scale-100 transition-all duration-200 ease-in-out";
 
   return (
     <>
@@ -153,7 +153,7 @@ const QuestionPage = () => {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search Question.. 🔍"
           />
-          <div className="bg-[#c8e6c9] rounded-r-[4px] text-sm md:text-base  xl:text-lg px-[12px] py-[6px] text-[#242424] items-center flex w-fit "  
+          <div className="bg-doneColor rounded-r-[4px] text-sm md:text-base  xl:text-lg px-[12px] py-[6px] text-[#242424] items-center flex w-fit "  
           style={{"textShadow": "0px 0px 10px rgba(0,210,106,0.65)"}}
           >
             <span className="font-semibold text-green-900">
