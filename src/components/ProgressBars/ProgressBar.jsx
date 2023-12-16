@@ -10,7 +10,7 @@ const ProgressBar = ({ questionSolved, value, height, width }) => {
   });
 
   return (
-    <div className="progress" style={barStyle}>
+    <div className="progress  border-[0rem] border-progressBarBorder" style={barStyle}>
       <div
         className="fill a bg-progressBar"
         style={{ width: `${value}%`, "--progress-width": `${value}%` }}

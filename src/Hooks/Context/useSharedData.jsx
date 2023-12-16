@@ -13,7 +13,6 @@ export const SharedDataProvider = ({ children }) => {
     DynamicData
   );
 
-  // console.log(sharedData.data);
 
   const resetData = () => {
     setSharedData(DynamicData);

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import  { useState } from "react";
 import { useEffect } from "react";
 
 const getSavedValues = (key, initValue) => {
