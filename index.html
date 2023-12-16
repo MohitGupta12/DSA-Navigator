@@ -9,6 +9,17 @@
 </head>
 
 <body>
+  <script>
+    const setRootClass = (className) => {
+      const rootElement = document.querySelector("body"); // This selects the <html> element
+
+      // Set the class attribute
+      rootElement.setAttribute('class', className);
+    };
+
+    // Example usage
+    setRootClass('bg-bkg text-textColor');
+  </script>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
   <script src="https://kit.fontawesome.com/ba432f3302.js"

@@ -3,45 +3,130 @@
 @tailwind utilities;
 
 /* @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); */
-@layer base {
-	:root {
-		/* Home Page  */
-		--bkg: hsl(216, 18%, 16%);
-		--text-color: hsl(0, 0%, 100%);
-		--nav-bar: 217deg, 10%, 25%;
-		--topic-card: 183deg, 71%, 77%;
-		--topic-border: 183deg, 56%, 51%;
-		--topic-btn-color: 232deg, 52%, 37%;
-		--topic-text-color: 240deg, 1%, 14%;
-		--topic-shadow-color: 183deg, 71%, 80%, 0.4;
-		--topic-shadow-started-color: 153deg, 71%, 80%, 0.4;
-		--topic-card-started: 153deg, 64%, 75%;
-		--topic-border-started: 153deg, 54%, 51%;
-		--topic-btn-color-started: 112deg, 52%, 37%;
-		--progress-bar: 123deg, 70%, 50%;
-		/* Question Page  */
-		--done-color: 122deg, 38%, 84%;
-		--bookmark-btn-active-color: 150deg, 100%, 41%;
-		--bookmark-btn-color: 160deg, 84%, 39%;
-		--table-header-color: 217deg, 19%, 27%;
-		--bookmark-icon-color: 142deg, 71%, 45%;
-		--notes-icon-color: 45deg, 93%, 47%;
-		--done-row-color: 120deg, 100%, 50%, 0.247;
-	}
+:root {
+	/* Home Page   */
+	/* Home Page  */
+	--bkg: 9, 71%, 96%;
+	--text-color: 0, 15%, 11%;
+	--nav-bar: 0deg,
+		15%,
+		11%;
+	--nav-bar: 55deg,
+		5%,
+		11%;
+	--topic-card: 196deg,
+		50%,
+		75%;
+	--topic-border: 197deg,
+		60%,
+		44%;
+	--topic-btn-color: 232deg,
+		52%,
+		37%;
+	--topic-text-color: 240deg,
+		1%,
+		14%;
+	--topic-shadow-co1or: null;
+	--topic-card-started: 101deg,
+		60%,
+		68%;
+	--topic-border-started: 101deg,
+		60%,
+		44%;
+	--topic-btn-color-started: 101deg,
+		60%,
+		33%;
+	--topic-shadow-started-color: null;
+	--progress-bar: 165deg,
+		63%,
+		33%;
+	--progress-bar-border: 217deg,
+		10%,
+		25%;
+	--scroll-animation: 55deg,
+		5%,
+		16%;
+	/* Question Page  */
+	--done-color: 122deg,
+		38%,
+		84%;
+	--bookmark-btn-active-color: 150deg,
+		100%,
+		41%;
+	--bookmark-btn-color: 160deg,
+		84%,
+		39%;
+	--table-header-color: 158deg,
+		95%,
+		34%;
+	--bookmark-icon-color-active: 152deg, 71%, 45%;
+	--bookmark-icon-color: 0deg, 0%, 0%, .7;
+	--notes-icon-color-active: 45deg, 93%, 47%;
+	--notes-icon-color: 0deg, 0%, 0%, .7;
+	--done-row-color: 120deg, 100%, 50%, 0.247;
+	--done-tag: 110deg, 65%, 70%, .7;
+	--done-tag-text: 0deg, 0%, 0%, .7;
+	--pending-tag: 63deg, 76%, 78%, .7;
+	--pending-tag-text: 0deg, 0%, 0%, .7;
 
+	--model-page: 32deg, 71%, 94%;
+	--model-page-border: 32deg, 71%, 86%;
+	--model-page-shadow: 240deg, 5%, 34%;
+
+	--about-border: 0deg, 0%, 0%, .6;
 }
+
+[data-theme="dark"] {
+	--bkg: 216, 18%, 16%;
+	--text-color: 0, 0%, 100%;
+	--nav-bar: 217deg, 10%, 25%;
+	--topic-card: 183deg, 71%, 77%;
+	--topic-border: 183deg, 56%, 51%;
+	--topic-btn-color: 232deg, 52%, 37%;
+	--topic-text-color: 240deg, 1%, 14%;
+	--topic-shadow-color: 183deg, 71%, 80%, 0.4;
+	--topic-shadow-started-color: 153deg, 71%, 80%, 0.4;
+	--topic-card-started: 153deg, 64%, 75%;
+	--topic-border-started: 153deg, 54%, 51%;
+	--topic-btn-color-started: 112deg, 52%, 37%;
+	--progress-bar: 123deg, 70%, 50%;
+	--progress-bar-bg: 0deg, 0%, 85%;
+	/* Question Page   */
+	--done-color: 122deg, 38%, 84%;
+	--bookmark-btn-active-color: 150deg, 100%, 41%;
+	--bookmark-btn-color: 160deg, 84%, 39%;
+	--table-header-color: 217deg, 19%, 27%;
+	--bookmark-icon-color: 0deg, 0%, 100%;
+	--bookmark-icon-color-active: 142deg, 71%, 45%;
+	--notes-icon-color: 0deg, 0%, 100%;
+	--notes-icon-color-active: 45deg, 93%, 47%;
+	--done-row-color: 120deg, 100%, 50%, 0.247;
+	--done-tag: 143deg, 64%, 24%, .5;
+	--done-tag-text: 141deg, 79%, 85%;
+	--pending-tag: 32deg, 81%, 29%, .5;
+	--pending-tag-text: 53deg, 98%, 77%;
+	--model-page: 240deg, 5%, 26%;
+	--model-page-border: 240deg, 4%, 16%;
+	--model-page-shadow: 240deg, 5%, 34%, .4;
+	--about-border: 0deg, 0%, 100%, .6;
+}
+
+
+* {
+	transition: all 3 ease-in-out;
+}
+
 
 
 :root {
 	/* font-family: 'Rubik', 'Montserrat', Inter, Avenir, Helvetica, Arial, sans-serif; */
-	font-family: 'Ubuntu Mono', ;
+	font-family: 'Ubuntu Mono',
+	;
 	line-height: 1.5;
 	font-weight: 400;
 	margin: 0;
 	padding: 0;
 	color-scheme: light dark;
-	color: var(--text-color);
-	background-color: var(--bkg);
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -61,6 +146,8 @@ body {
 	min-width: 320px;
 	min-height: 100vh;
 } */
+
+
 
 ::-webkit-scrollbar {
 	display: none;
