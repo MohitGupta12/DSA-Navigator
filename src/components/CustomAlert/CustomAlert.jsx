@@ -1,6 +1,10 @@
 import Swal from "sweetalert2";
 
-const CustomAlert = () => {
+
+const CustomAlert = async (resetHandler) => {
+
+
+
   const swalWithTailwindButtons = Swal.mixin({
     customClass: {
       confirmButton:
@@ -11,31 +15,31 @@ const CustomAlert = () => {
     buttonsStyling: false,
   });
 
-  swalWithTailwindButtons
-    .fire({
-      title: "Are you sure about it?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonText: "Yes, Reset it!",
-      cancelButtonText: "No, cancel!",
-      reverseButtons: true,
-    })
-    .then((result) => {
-      if (result.isConfirmed) {
-        swalWithTailwindButtons.fire(
-          "Reset Complete ! ",
-          "Your progress has been reset.",
-          "success"
-        );
-      } else if (result.dismiss === Swal.DismissReason.cancel) {
-        swalWithTailwindButtons.fire(
-          "Cancelled",
-          "Your progress is safe",
-          "error"
-        );
-      }
-    });
+  const result = await swalWithTailwindButtons.fire({
+    title: "Are you sure about it?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Yes, Reset it!",
+    cancelButtonText: "No, cancel!",
+    reverseButtons: true,
+  });
+
+  if (result.isConfirmed) {
+    
+    await swalWithTailwindButtons.fire(
+      "Reset Complete ! ",
+      "Your progress has been reset.",
+      "success"
+    );
+          resetHandler();
+         } else if (result.dismiss === Swal.DismissReason.cancel) {
+    await swalWithTailwindButtons.fire(
+      "Cancelled",
+      "Your progress is safe",
+      "error"
+    );
+  }
 };
 
 export default CustomAlert;
