@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import HomePage from "../../Pages/HomePage";
 import QuestionPage from "../../Pages/QuestionPage.jsx";
 import AboutPage from "../../Pages/AboutPage.jsx";
+import ErrorPage from "../../Pages/ErrorPage";
 
 function Layout() {
   const location = useLocation();
@@ -27,8 +28,10 @@ function Layout() {
         <AnimatePresence mode="wait">
           <Routes key={location.pathname} location={location} >
             <Route exact path="/" element={<HomePage />} />
-            <Route path="questions/:id" element={<QuestionPage />} />
+            <Route path="questions/:id" element={<QuestionPage/>} />
             <Route path="about" element={<AboutPage />} />
+            <Route path="*" element={<ErrorPage />} />
+            <Route path="error" element={<ErrorPage />} />
           </Routes>
         </AnimatePresence>
         <BottomNavBar />

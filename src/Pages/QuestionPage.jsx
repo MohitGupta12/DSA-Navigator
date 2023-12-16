@@ -10,8 +10,10 @@ import { useSharedDataContext } from "../Hooks/Context/useSharedData";
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
 
 
+
 const QuestionPage = () => {
   const { id } = useParams();
+  
   const sharedContent = useSharedDataContext();
   const dynamicData = sharedContent.sharedData.data[id];
   const notesHandler = sharedContent.notesHandler;

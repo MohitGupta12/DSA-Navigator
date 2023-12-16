@@ -1,4 +1,3 @@
-import React from "react";
 import myGif from "./assets/gif.gif";
 
 const AboutPageSenku = () => {
