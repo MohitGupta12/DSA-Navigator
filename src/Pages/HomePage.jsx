@@ -5,6 +5,7 @@ import ScrollAnimation from "../Animations/ScrollAnimation";
 import QuestionGrid from "../components/QuestionGrid/QuestionGrid";
 import StaticData from "../data/data.json";
 import { useSharedDataContext } from "../Hooks/Context/useSharedData";
+import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
 
 const HomePage = () => {
   let totalDoneQuestion = 0;
@@ -24,6 +25,7 @@ const HomePage = () => {
   const totalPercentage = ((totalDoneQuestion / 450) * 100).toFixed(2);
   return (
     <>
+    <AnimatedPage >
       <h2 className="mx-1 text-xl font-semibold text-center md:text-2xl xl:text-3xl  " style={{"textShadow": "0px 0px 8px rgba(255,255,255,0.65)"}}>
         Your DSA Cracking Portal
       </h2>
@@ -43,6 +45,8 @@ const HomePage = () => {
       <div className="flex items-start justify-center w-screen ">
         <QuestionGrid staticData={staticData} isStart={isStart} />
       </div>
+          </AnimatedPage >
+
     </>
   );
 };

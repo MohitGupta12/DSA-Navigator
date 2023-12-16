@@ -43,8 +43,8 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
 
   return (
     <>
-      <div className="w-4/5 h-[72vh] overflow-auto " style ={{'boxShadow': '0px 8px 20px 6px rgba(0,0,0,0.3)'}}>
-        <table className="w-full ">
+      <div className="w-4/5 h-[72vh] overflow-auto " style ={{'boxShadow': '0px 8px 20px 6px rgba(0,0,0,0.1)'}}>
+        <table className="w-full  ">
           <thead className="sticky top-0 bg-tableHeaderColor border-b-2 z-10 border-gray-400 rounded-t-lg " >
             <tr>
               <th className="  sticky top-0 p-3 text-[20px] font-bold tracking-wide ">
@@ -73,44 +73,44 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
               const link2 = row.URL2;
               const index = row.id - 1;
               const problem = row.Problem;
-              const shadowC =dynamicData[index].Done ? '0px 0px 12px 04px rgba(57,255,20,.25)': '0px 0px 12px 04px rgba(150,210,250,0.2)'
+              
               return (
                 <tr
                   key={index}
                   className={dynamicData[index].Done ? "bg-doneRowColor" : ""}
-                  style={{'boxShadow': `${shadowC}`}}
                 >
-                  <td className="w-32 p-3 text-gray-200">
+                  <td className=" w-32 p-3 ">
                     <div className="flex justify-start ">
+                      
                       <input
                         type="checkbox"
                         checked={dynamicData[index].Done}
                         onChange={() => handleStatusChange(id, index)}
-                        className="cursor-pointer"
+                        className="cursor-pointer "
                       />
                       <div
                         className="flex justify-center w-full px-3 py-2"
                         onClick={() => handleStatusChange(id, index)}
                       >
                         {dynamicData[index].Done ? (
-                          <span className="cursor-pointer flex-1 p-1.5 text-sm font-medium uppercase tracking-wider text-green-200 bg-green-800 rounded-xl bg-opacity-50 border-2 border-green-800 text-center">
+                          <span className="cursor-pointer flex-1 p-1.5 text-sm font-semibold uppercase tracking-wider text-doneTagText bg-doneTag rounded-xl bg-opacity-50 border-2 border-doneTag text-center ">
                             Done
                           </span>
                         ) : (
-                          <span className="flex-1 text-center cursor-pointer p-1.5 text-sm font-medium uppercase tracking-wider text-yellow-200 bg-yellow-800 rounded-xl bg-opacity-50 border-2 border-yellow-800">
+                          <span className="flex-1 text-center cursor-pointer p-1.5 text-sm font-semibold uppercase tracking-wider text-pendingTagText bg-pendingTag rounded-xl bg-opacity-50 border-2 border-pendingTag">
                             Pending
                           </span>
                         )}
                       </div>
                     </div>
                   </td>
-                  <td className="p-3 text-center text-gray-200 w-11">
+                  <td className="p-3 text-center  w-11">
                     {row.id}
                   </td>
-                  <td className="flex-1 p-3 text-lg text-gray-200 whitespace-nowrap">
+                  <td className="flex-1 p-3 text-lg  whitespace-nowrap">
                     {row.Problem}
                   </td>
-                  <td className="p-3 text-gray-200 w-14">
+                  <td className="p-3  w-14">
                     <div className="flex items-center justify-center ">
                       <a href={link1} target="_blank" rel="noopener noreferrer">
                         <img
@@ -121,7 +121,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                       </a>
                     </div>
                   </td>
-                  <td className="p-3 text-gray-200 w-14">
+                  <td className="p-3 w-14">
                     <div className="flex items-center justify-center ">
                       <a href={link2} target="_blank" rel="noopener noreferrer">
                         <img
@@ -132,20 +132,18 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                       </a>
                     </div>
                   </td>
-                  <td className="w-20 p-3 text-gray-200">
+                  <td className="w-20 p-3 ">
                     <div className="flex justify-evenly">
                       {dynamicData[index].Bookmark ? (
                         <SolidBookmarkIcon
-                          className="w-6 h-6  text-bookmarkIconColor "
-                          style={{ filter: 'drop-shadow(0px 0px 8px rgba(16, 185, 129, 0.65))' }}
+                          className="w-6 h-6  text-bookmarkIconColorActive "
                           onClick={() => {
                             handleBookmarkChange(id, index);
                           }}
                         />
                       ) : (
                         <OutlineBookmarkIcon
-                          className="w-6 h-6 text-white "
-                          style={{ filter: 'drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.65))' }}
+                          className="w-6 h-6 text-bookmarkIconColor "
                           onClick={() => {
                             handleBookmarkChange(id, index);
                           }}
@@ -154,16 +152,14 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                       )}
                       {dynamicData[index].Notes ? (
                         <SolidPencilSquareIcon
-                          className="w-6 h-6 text-notesIconColor drop-shadow-notes"
-                          style={{ filter: 'drop-shadow(0px 0px 8px rgba(245, 158, 11, 0.65))' }}
+                          className="w-6 h-6 text-notesIconColorActive drop-shadow-notes"
                           onClick={() => {
                             openModal(problem, id, index);
                           }}
                         />
                       ) : (
                         <OutlinePencilSquareIcon
-                          className="w-6 h-6 text-white"
-                          style={{ filter: 'drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.65))' }}
+                          className="w-6 h-6 text-notesIconColor"
                           onClick={() => openModal(problem, id, index)}
                         />
                       )}
