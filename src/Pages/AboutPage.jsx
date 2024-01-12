@@ -102,11 +102,13 @@ const resetData = ()=>{
             </motion.button>
           </a>
         </div>
+          <div className="fixed " >
+            <div className=" fixed right-0 h-[300px] w-[300px]">
           <Tooltip TransitionComponent={Zoom} title="Coming Soon" arrow placement="top-start">
-          <div className=" fixed right-2 bottom-10 h-[300px] w-[300px]">
-            <img src="../src/assets/Senku/senku_about.svg" alt="about senku" />
-          </div>
+              <img src="../src/assets/Senku/senku_about.svg" alt="about senku" />
         </Tooltip>
+            </div>
+          </div>
       </div>
     </AnimatedPage>
  
