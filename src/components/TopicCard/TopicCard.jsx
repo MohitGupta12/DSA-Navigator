@@ -12,7 +12,7 @@ const TopicCard = ({ staticData, dynamicData, index }) => {
   const lap1 =  !dynamicData.data[index].started?"h-48 px-6 py-4 bg-topicCard border-2 border-topicBorder rounded-2xl shadow-md shadow-topicShadowColor":"h-48 px-6 py-4 bg-topicCardStarted border-2 border-topicBorderStarted rounded-2xl shadow-md shadow-topicShadowColorStarted";
   // console.log(bgColor);
   return (
-    <div className={lap1}> 
+    <div className={lap1}>
       <div className="flex-col justify-evenly items-start text-topicTextColor ">
         <title className="flex items-start justify-between my-2">
           <div className="pr-5 text-2xl font-bold xl:text-3xl text-start ">
@@ -23,7 +23,7 @@ const TopicCard = ({ staticData, dynamicData, index }) => {
             key={index}
             to={`/questions/${index}`}
           >
-            <Button 
+            <Button
               text={
                 dynamicData.data[index].started ? "Solve Now" : "Start  Now"
               }
@@ -37,14 +37,17 @@ const TopicCard = ({ staticData, dynamicData, index }) => {
         <div className="pr-5 text-sm font-normal md:text-base text-start">
           Total Questions {dynamicData.data[index].questions.length}
         </div>
-
         {dynamicData.data[index].started ? (
           <div>
-            <div className="pr-5 text-sm italic font-normal md:text-base text-start">
-              {dynamicData.data[index].questions.length -
-                dynamicData.data[index].doneQuestions}{" "}
-              more to go
-            </div>
+            { dynamicData.data[index].doneQuestions === dynamicData.data[index].questions.length ?
+              (<div className="pr-5 text-sm italic font-bold md:text-base text-start">
+              🎉Congrats you have completed this topic🎉
+              </div>)
+              :(<div className="pr-5 text-sm italic font-normal md:text-base text-start">
+                  {dynamicData.data[index].questions.length -
+                  dynamicData.data[index].doneQuestions} more to go
+                </div>)
+            }
             <div className="pr-5 mt-3 text-sm italic font-normal md:text-base text-start">
               {percentage}% done
             </div>
