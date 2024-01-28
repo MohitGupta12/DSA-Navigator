@@ -14,16 +14,16 @@ import { useSharedDataContext } from "../../Hooks/Context/useSharedData";
 function gettingLogo(url) {
   let src;
   if (url.includes("geeksforgeeks")) {
-    src = "/public/assets/gfg.png";
+    src = "../public/assets/gfg.png";
   } else if (url.includes("codingninjas")) {
-    src = "/public/assets/coding ninjas.png";
+    src = "https://res.cloudinary.com/dfgxxsbbt/image/upload/v1706460235/dsa-tracker/fu1chzjzobdfofd0jdl1.png";
   } else if (url.includes("leetcode")) {
-    src = "./src/assets/leetcode.png";
+    src = "../src/assets/leetcode.png";
   } else {
     if (!url) {
-      src = "./src/assets/empty.png";
+      src = "../src/assets/empty.png";
     } else {
-      src = "./src/assets/article.png";
+      src = "../src/assets/article.png";
     }
   }
   return src;
