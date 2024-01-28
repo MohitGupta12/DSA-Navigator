@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { React, useEffect, useRef, useState } from "react";
 import SolvedQuesBar from "../components/ProgressBars/SolvedQuesBar";
-import ScrollAnimation from "../Animations/ScrollAnimation";
+import ScrollAnimation from "../components/ScrollAnimation/ScrollAnimation";
 import QuestionGrid from "../components/QuestionGrid/QuestionGrid";
 import StaticData from "../data/data.json";
 import { useSharedDataContext } from "../Hooks/Context/useSharedData";
