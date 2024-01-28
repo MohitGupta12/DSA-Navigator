@@ -14,9 +14,9 @@ import { useSharedDataContext } from "../../Hooks/Context/useSharedData";
 function gettingLogo(url) {
   let src;
   if (url.includes("geeksforgeeks")) {
-    src = "/src/assets/gfg.png";
+    src = "/public/assets/gfg.png";
   } else if (url.includes("codingninjas")) {
-    src = "/src/assets/coding ninjas.png";
+    src = "/public/assets/coding ninjas.png";
   } else if (url.includes("leetcode")) {
     src = "./src/assets/leetcode.png";
   } else {
