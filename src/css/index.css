@@ -111,7 +111,6 @@
 	--about-border: 0deg, 0%, 100%, .6;
 }
 
-
 * {
 	transition: all 3 ease-in-out;
 }
@@ -120,8 +119,7 @@
 
 :root {
 	/* font-family: 'Rubik', 'Montserrat', Inter, Avenir, Helvetica, Arial, sans-serif; */
-	font-family: 'Ubuntu Mono',
-	;
+	font-family: 'Ubuntu Mono';
 	line-height: 1.5;
 	font-weight: 400;
 	margin: 0;
