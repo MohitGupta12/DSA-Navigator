@@ -14,16 +14,16 @@ import { useSharedDataContext } from "../../Hooks/Context/useSharedData";
 function gettingLogo(url) {
   let src;
   if (url.includes("geeksforgeeks")) {
-    src = "../public/assets/gfg.png";
+    src = "https://res.cloudinary.com/dd8jtryuv/image/upload/v1706460851/Dsa-tracker%20assets/gfg.png";
   } else if (url.includes("codingninjas")) {
     src = "https://res.cloudinary.com/dfgxxsbbt/image/upload/v1706460235/dsa-tracker/fu1chzjzobdfofd0jdl1.png";
   } else if (url.includes("leetcode")) {
-    src = "../src/assets/leetcode.png";
+    src = "https://res.cloudinary.com/dd8jtryuv/image/upload/v1706460850/Dsa-tracker%20assets/leetcode.png";
   } else {
     if (!url) {
-      src = "../src/assets/empty.png";
+      src = "https://res.cloudinary.com/dd8jtryuv/image/upload/v1706460849/Dsa-tracker%20assets/empty.png";
     } else {
-      src = "../src/assets/article.png";
+      src = "https://res.cloudinary.com/dd8jtryuv/image/upload/v1706460851/Dsa-tracker%20assets/article.png";
     }
   }
   return src;

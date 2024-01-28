@@ -120,8 +120,7 @@
 
 :root {
 	/* font-family: 'Rubik', 'Montserrat', Inter, Avenir, Helvetica, Arial, sans-serif; */
-	font-family: 'Ubuntu Mono',
-	;
+	font-family: 'Ubuntu Mono', 'Montserrat', Inter, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 	margin: 0;
