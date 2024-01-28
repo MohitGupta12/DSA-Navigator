@@ -43,7 +43,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
 
   return (
     <>
-      <div className="w-4/5 h-[72vh] overflow-auto " style ={{'boxShadow': '0px 8px 20px 6px rgba(0,0,0,0.1)'}}>
+      <div className="w-[85%] h-[72vh] overflow-auto " style ={{'boxShadow': '0px 8px 20px 6px rgba(0,0,0,0.1)'}}>
         <table className="w-full  ">
           <thead className="sticky top-0 bg-tableHeaderColor border-b-2 z-10 border-gray-400 rounded-t-lg " >
             <tr>
@@ -73,7 +73,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
               const link2 = row.URL2;
               const index = row.id - 1;
               const problem = row.Problem;
-              
+
               return (
                 <tr
                   key={index}
@@ -81,7 +81,6 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                 >
                   <td className=" w-32 p-3 ">
                     <div className="flex justify-start ">
-                      
                       <input
                         type="checkbox"
                         checked={dynamicData[index].Done}
@@ -93,7 +92,7 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                         onClick={() => handleStatusChange(id, index)}
                       >
                         {dynamicData[index].Done ? (
-                          <span className="cursor-pointer flex-1 p-1.5 text-sm font-semibold uppercase tracking-wider text-doneTagText bg-doneTag rounded-xl bg-opacity-50 border-2 border-doneTag text-center ">
+                          <span className="flex-1 text-center cursor-pointer p-1.5 text-sm font-semibold uppercase tracking-wider text-doneTagText bg-doneTag rounded-xl bg-opacity-50 border-2 border-doneTag ">
                             Done
                           </span>
                         ) : (
@@ -111,23 +110,23 @@ const BasicTable = ({ id, staticQuestion, openModal, sortingFunction }) => {
                     {row.Problem}
                   </td>
                   <td className="p-3  w-14">
-                    <div className="flex items-center justify-center ">
+                    <div className="flex items-center justify-center w-8 h-8  ">
                       <a href={link1} target="_blank" rel="noopener noreferrer">
                         <img
                           src={gettingLogo(link1)}
                           alt="Problem 1 website logo"
-                          className="w-8 h-8 "
+                          // className="w-8 h-8"
                         />
                       </a>
                     </div>
                   </td>
                   <td className="p-3 w-14">
-                    <div className="flex items-center justify-center ">
+                    <div className="flex items-center justify-center w-8 h-8">
                       <a href={link2} target="_blank" rel="noopener noreferrer">
                         <img
                           src={gettingLogo(link2)}
                           alt="Problem 2 website logo"
-                          className="w-8 h-8 "
+                          // className="w-8 h-8"
                         />
                       </a>
                     </div>
