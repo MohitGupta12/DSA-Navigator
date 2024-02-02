@@ -22,7 +22,7 @@ function Layout() {
           style={{ textShadow: "0px 0px 6px rgba(255,255,255,0.71) " }}
         >
           <Tooltip TransitionComponent={Zoom} title="Home" arrow placement="right">
-            <Link to={"/"}>DSA Tracker</Link>
+            <Link to={"/"}>DSA Quest Navigator</Link>
           </Tooltip>
         </h1>
         <AnimatePresence mode="wait">
