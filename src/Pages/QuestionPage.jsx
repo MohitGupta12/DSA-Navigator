@@ -130,7 +130,6 @@ const QuestionPage = () => {
 
   return (
     <><AnimatedPage>
-      
         <NotesModal
           isNotesOpen={isNotesOpen}
           data={dataInModal}
@@ -139,7 +138,7 @@ const QuestionPage = () => {
         />
         <h2 className="mx-1 text-xl font-semibold text-center md:text-2xl xl:text-3xl "
         >
-            Topics/{dynamicData.topicName}
+            Quest/{dynamicData.topicName}
         </h2>
         <div className="flex justify-center w-full h-8 my-4 md:h-9 xl:h-10 ">
           <div className="flex w-3/4 focus:ring-2 focus:ring-primary">
