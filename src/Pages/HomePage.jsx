@@ -27,19 +27,18 @@ const HomePage = () => {
     <>
     <AnimatedPage >
       <h2 className="mx-1 text-xl font-semibold text-center md:text-2xl xl:text-3xl  " style={{"textShadow": "0px 0px 8px rgba(255,255,255,0.65)"}}>
-        Your DSA Cracking Portal
+        Your DSA Navigating Portal
       </h2>
       {!isStart ? (
         <h2 className="mt-2 text-lg font-semibold text-center md:text-xl xl:text-2xl " style={{"textShadow": "0px 0px 8px rgba(255,255,255,0.65)"}}>
           {" "}
-          Start Solving{" "}
+          Select your Quest{" "}
         </h2>
       ) : (
         <SolvedQuesBar
           value={totalPercentage}
           questionSolved={totalDoneQuestion}
         />
-        
       )}
       <ScrollAnimation />
       <div className="flex items-start justify-center w-screen ">
