@@ -21,6 +21,7 @@
     "@sweetalert2/theme-dark": "^5.0.15",
     "@sweetalert2/themes": "^5.0.15",
     "@tanstack/react-table": "^8.10.7",
+    "dsa-tracker": "file:",
     "framer-motion": "^10.16.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
