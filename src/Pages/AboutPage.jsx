@@ -18,7 +18,7 @@ const AboutPage = () => {
       <AnimatedPage>
         <div className="flex flex-col items-center justify-center my-12">
           <div className="w-4/5 border-2 border-aboutBorder ">
-            <h2 className="mx-8 my-4 text-4xl font-semibold text-center">
+            <h2 className="mx-3 my-2 text-4xl font-semibold text-center">
               About
             </h2>{" "}
             <hr className="border-aboutBorder" />
@@ -34,7 +34,7 @@ const AboutPage = () => {
               progress and mastery of this crucial skill set
             </div>
           </div>
-          <h3 className="mx-8 my-4 mt-6 text-4xl font-semibold text-center">
+          <h3 className="mx-8 my-4 mt-1 text-4xl font-semibold text-center">
             Credits
           </h3>
           <div className="px-16 mx-4 mt-2 text-2xl text-center">
