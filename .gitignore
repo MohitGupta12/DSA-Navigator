@@ -22,3 +22,4 @@ Ideas
 *.njsproj
 *.sln
 *.sw?
+.env
