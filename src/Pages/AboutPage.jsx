@@ -353,9 +353,9 @@ const AboutPage = () => {
                       width="285.142"
                       height="73"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -374,9 +374,9 @@ const AboutPage = () => {
                       width="112.161"
                       height="62.9819"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -395,9 +395,9 @@ const AboutPage = () => {
                       width="88.467"
                       height="52.8115"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -416,9 +416,9 @@ const AboutPage = () => {
                       width="37.0227"
                       height="79.5452"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -437,9 +437,9 @@ const AboutPage = () => {
                       width="121.835"
                       height="90.8289"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -458,9 +458,9 @@ const AboutPage = () => {
                       width="81.825"
                       height="92.6685"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -479,9 +479,9 @@ const AboutPage = () => {
                       width="156.632"
                       height="112.129"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -500,9 +500,9 @@ const AboutPage = () => {
                       width="164.55"
                       height="56.95"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -521,9 +521,9 @@ const AboutPage = () => {
                       width="124.653"
                       height="88.7019"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -542,9 +542,9 @@ const AboutPage = () => {
                       width="199.386"
                       height="131.552"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -563,9 +563,9 @@ const AboutPage = () => {
                       width="72.0627"
                       height="165.961"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -585,8 +585,8 @@ const AboutPage = () => {
                       y2="267.819"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#52A7C0" />
-                      <stop offset="1" stop-color="#0E5064" />
+                      <stop stopColor="#52A7C0" />
+                      <stop offset="1" stopColor="#0E5064" />
                     </linearGradient>
                     <linearGradient
                       id="paint1_linear_101_3"
@@ -596,8 +596,8 @@ const AboutPage = () => {
                       y2="265.977"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop offset="0.473958" stop-color="#83C1CE" />
-                      <stop offset="1" stop-color="#90C8D3" />
+                      <stop offset="0.473958" stopColor="#83C1CE" />
+                      <stop offset="1" stopColor="#90C8D3" />
                     </linearGradient>
                   </defs>
                 </svg>
