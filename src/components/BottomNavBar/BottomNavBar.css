@@ -1,0 +1,15 @@
+.bottom-nav {
+  height: 3rem;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .about-tag {
+    display: none;
+  }
+}
